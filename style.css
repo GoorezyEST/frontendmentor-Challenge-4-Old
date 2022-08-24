@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: hsl(217deg, 54%, 11%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: hsl(216deg, 50%, 16%);
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.5);
+}
+.card__nft-container {
+  display: flex;
+  justify-content: center;
+}
+.card__nft-container__photo {
+  width: 100%;
+  border-radius: 1rem;
+}
+.card__nft-container__hover {
+  position: absolute;
+  background-image: linear-gradient(rgba(0, 255, 246, 0.5), rgba(0, 255, 246, 0.5));
+  height: 30rem;
+  width: 30rem;
+  border-radius: 1rem;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.card__nft-container__hover--icon {
+  position: absolute;
+  transform: translateY(14rem) translateX(13rem);
+}
+.card__nft-container__hover:hover {
+  opacity: 1;
+}
+.card__header {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  margin-top: 2rem;
+  letter-spacing: 0.1rem;
+  cursor: default;
+}
+.card__header:hover {
+  color: hsl(178deg, 100%, 50%);
+}
+.card__info {
+  color: hsl(215deg, 51%, 70%);
+  font-weight: 300;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+.card__section-data {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.card__section-data__price {
+  display: flex;
+  align-items: center;
+}
+.card__section-data__price--price {
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: hsl(178deg, 100%, 50%);
+  margin-left: 0.9rem;
+}
+.card__section-data__time {
+  display: flex;
+  align-items: center;
+}
+.card__section-data__time--days {
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: hsl(215deg, 51%, 70%);
+  margin-left: 0.9rem;
+}
+.card__section-creator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.card__section-creator__photo {
+  width: 10%;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+.card__section-creator__data {
+  color: hsl(215deg, 51%, 70%);
+  font-weight: 300;
+  font-size: 1.8rem;
+  margin-left: 0.9rem;
+  cursor: default;
+}
+.card__section-creator__data span {
+  color: hsl(0deg, 0%, 100%);
+  cursor: inherit;
+}
+.card__section-creator__data span:hover {
+  color: hsl(178deg, 100%, 50%);
+}
+
+.line {
+  height: 1px;
+  background-color: hsl(215deg, 32%, 27%);
+  border: none;
+  margin: 2rem 0 2rem 0;
+}
+
+/*# sourceMappingURL=style.css.map */

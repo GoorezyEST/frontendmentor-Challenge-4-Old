@@ -1,0 +1,152 @@
+//Colors
+$white: hsl(0, 0%, 100%);
+$body-bg: hsl(217, 54%, 11%);
+$card-bg: hsl(216, 50%, 16%);
+$line: hsl(215, 32%, 27%);
+$cyan: hsl(178, 100%, 50%);
+$light-blue: hsl(215, 51%, 70%);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; //Equals 1 rem to 10px!
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: $body-bg;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: $card-bg;
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.5);
+
+  &__nft-container {
+    display: flex;
+    justify-content: center;
+
+    &__photo {
+      width: 100%;
+      border-radius: 1rem;
+    }
+
+    &__hover {
+      position: absolute;
+      background-image: linear-gradient(
+        rgba(0, 255, 246, 0.5),
+        rgba(0, 255, 246, 0.5)
+      );
+      height: 30rem;
+      width: 30rem;
+      border-radius: 1rem;
+      opacity: 0;
+      transition: all 0.2s;
+
+      &--icon {
+        position: absolute;
+        transform: translateY(14rem) translateX(13rem);
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__header {
+    color: $white;
+    font-weight: 600;
+    margin-top: 2rem;
+    letter-spacing: 0.1rem;
+    cursor: default;
+
+    &:hover {
+      color: $cyan;
+    }
+  }
+
+  &__info {
+    color: $light-blue;
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+
+  &__section-data {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    &__price {
+      display: flex;
+      align-items: center;
+
+      &--price {
+        font-weight: 400;
+        font-size: 1.7rem;
+        color: $cyan;
+        margin-left: 0.9rem;
+      }
+    }
+
+    &__time {
+      display: flex;
+      align-items: center;
+
+      &--days {
+        font-weight: 400;
+        font-size: 1.7rem;
+        color: $light-blue;
+        margin-left: 0.9rem;
+      }
+    }
+  }
+
+  &__section-creator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &__photo {
+      width: 10%;
+      border: 1px solid $white;
+      border-radius: 50%;
+    }
+
+    &__data {
+      color: $light-blue;
+      font-weight: 300;
+      font-size: 1.8rem;
+      margin-left: 0.9rem;
+      cursor: default;
+
+      span {
+        color: $white;
+        cursor: inherit;
+
+        &:hover {
+          color: $cyan;
+        }
+      }
+    }
+  }
+}
+
+.line {
+  height: 1px;
+  background-color: $line;
+  border: none;
+  margin: 2rem 0 2rem 0;
+}
